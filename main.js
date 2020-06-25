@@ -12,45 +12,55 @@ function getLastItemFrom(arr){
 }
 
 function getIndex3(arr) {
-  if (arr.length < 4) {
-    return arr[arr.length-1]
+  let lastIndex = arr.length - 1
+  if (lastIndex < 4) {
+    return arr[lastIndex]
   }
-  if (arr.length >= 4) {
+  if (lastIndex >= 4) {
     return arr[3]
   }
 }
 
-function isLongList(arr) { 
-  const length = arr.length 
-  const lengthEqual10 =  length === 10
-  // const lengthEqual10 =  length === 10
-  if (lengthEqual10) {
-    console.log(lengthEqual10)
-  // } else { return 'false'}
+function isLongList(arr){
+  if (arr.length >= 10){
+    return true
+  } else {
+    return false;
+  }
 }
-// isLongList([10, 9, 8, 7, 6, 4, 3, 2, 1, 0]);
-
 
 function firstItemIsNumber(arr) {
- let Number = Number(arr[0])
+  const firstItem = arr[0]
+  const number = Number(arr[0])
+  const str = String(arr[0])
+  const array = Array.isArray(arr[0])
+  const isFunction = arr[0] instanceof Function;
 
- if (arr[0] === Number) {
-   return 'true'
+  isFunction;
+  if (firstItem === number) {
+   return true
+ }
+
+ if (firstItem === str) {
+   return false
+ }
+
+ if (firstItem === true || firstItem === false) {
+   return false
+ }
+
+ if (array) {
+   return false
+ }
+
+ if (isFunction) {
+   return false
  }
 }
 
 function secondCharOfThirdString(str) {
   return str[2][1]
 }
-
-// let str = ['hello', 'there', 'good', 'sir']
-// let thirdString = str[2]
-// thirdString;
-// let secondCHar = thirdString[1]
-// secondCHar;
-// let short = str[2][1]
-// short;
-// console.log(str[2][1]);
 
  /********************************************
  * CODE DOWN HERE IS FOR INTERNAL USE ONLY. *
