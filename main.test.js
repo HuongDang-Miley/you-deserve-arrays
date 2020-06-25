@@ -23,7 +23,6 @@ describe('getLastItemFrom', () => {
   })
 })
 
-
 describe('getIndex3', () => {
   it('returns index 3 of an array with at least 4 items', () => {
     expect(getIndex3(['hello', 'darkness', 'my', 'old', 'friend'])).toBe('old')
